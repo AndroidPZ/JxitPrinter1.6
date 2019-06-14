@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.jxit.jxitprinter1_6.activity.TextActivity"
+android:id="@+id/mTextActivityRL"
+android:background="@android:color/background_light">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/text_bar"
+        android:background="@color/orange_normal"
+        app:navigationIcon="@drawable/arrow_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:id="@+id/tv_text_title"
+            android:text="@string/text_test" />
+    </android.support.v7.widget.Toolbar>
+
+<!-- TODO: Update blank fragment layout -->
+
+    <TextView
+    android:text="@string/select_param"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tv_text_parameter"
+    android:textSize="16sp"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/text_bar" />
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_text_parameter"
+    android:id="@+id/ll">
+
+    <CheckBox
+        android:text="@string/text_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:id="@+id/cb_text_bold"
+        android:layout_weight="1"
+        android:layout_marginLeft="12dp" />
+
+    <CheckBox
+        android:text="@string/text_underline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_text_underline"
+        android:layout_weight="1" />
+
+    <CheckBox
+        android:text="@string/text_reverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_text_reverse"
+        android:layout_weight="1" />
+</LinearLayout>
+
+<TextView
+    android:text="@string/text_facetype"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/ll"
+    android:id="@+id/tv_text_type"
+    android:textSize="16sp"
+    android:gravity="center_vertical|center"
+    android:padding="5dp"
+    android:layout_margin="5dp" />
+
+<Spinner
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/tv_text_type"
+    android:id="@+id/sp_text_type"
+    android:layout_toEndOf="@+id/tv_text_type"
+    android:layout_alignTop="@+id/tv_text_type"
+    android:padding="5dp"
+    android:layout_toRightOf="@+id/tv_text_type" />
+
+<TextView
+    android:text="@string/text_character_width_times"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_text_type"
+    android:id="@+id/tv_char_width"
+    android:textSize="16sp"
+    android:gravity="center"
+    android:layout_margin="5dp"
+    android:padding="5dp" />
+
+<Spinner
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:ems="10"
+    android:id="@+id/sp_char_width"
+    android:layout_alignBottom="@+id/tv_char_width"
+    android:layout_alignTop="@+id/tv_char_width"
+    android:text="@string/char_width"
+    android:padding="5dp"
+    android:textSize="14sp"
+    android:layout_toEndOf="@+id/tv_char_width"
+    android:layout_toRightOf="@+id/tv_char_width"/>
+
+<TextView
+    android:text="@string/text_character_height_times"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_char_width"
+    android:id="@+id/tv_char_height"
+    android:layout_margin="5dp"
+    android:textSize="16sp"
+    android:padding="5dp" />
+
+<Spinner
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:ems="10"
+    android:layout_below="@+id/sp_char_width"
+    android:layout_toEndOf="@+id/tv_char_width"
+    android:id="@+id/sp_char_height"
+    android:layout_alignBottom="@+id/tv_char_height"
+    android:layout_alignTop="@+id/tv_char_height"
+    android:text="@string/char_height"
+    android:padding="5dp"
+    android:textSize="14sp"
+    android:layout_toRightOf="@+id/tv_char_width" />
+
+<TextView
+    android:text="@string/text_alignment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_char_height"
+    android:id="@+id/tv_text_align"
+    android:layout_margin="5dp"
+    android:textSize="16sp"
+    android:padding="5dp" />
+
+<Spinner
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/tv_text_align"
+    android:layout_toEndOf="@+id/tv_text_align"
+    android:id="@+id/sp_text_align"
+    android:layout_alignTop="@+id/tv_text_align"
+    android:padding="5dp"
+    android:layout_toRightOf="@+id/tv_text_align" />
+
+<TextView
+    android:text="@string/clockwise_rotate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_text_align"
+    android:id="@+id/tv_text_rotate"
+    android:textSize="16sp"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:visibility="visible" />
+
+<Spinner
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/sp_text_rotate"
+    android:layout_alignTop="@+id/tv_text_rotate"
+    android:layout_alignBottom="@+id/tv_text_rotate"
+    android:visibility="visible"
+    android:layout_toEndOf="@+id/tv_text_rotate"
+    android:layout_toRightOf="@+id/tv_text_rotate"/>
+
+<TextView
+    android:text="@string/input_text_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_text_rotate"
+    android:id="@+id/tv_text_content"
+    android:padding="5dp"
+    android:textSize="16sp"
+    android:layout_margin="5dp" />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/text_print_test"
+    android:ems="10"
+    android:layout_below="@+id/tv_text_content"
+    android:id="@+id/et_text_content"
+    android:background="@drawable/edittext_shape"
+    android:padding="10dp"
+    android:textSize="14sp"
+    android:layout_margin="5dp"
+    android:maxLines="7"
+    android:inputType="" />
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/et_text_content"
+    android:padding="5dp"
+    style="?android:attr/buttonBarStyle">
+
+    <Button
+        android:text="@string/send_print"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/btn_text_send"
+        android:layout_weight="1"
+        android:background="@drawable/click_selector"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        style="?android:attr/buttonBarButtonStyle"/>
+
+    <Button
+        android:text="@string/restore_default"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/btn_text_default"
+        android:layout_weight="1"
+        android:background="@drawable/click_selector"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        style="?android:attr/buttonBarButtonStyle"/>
+</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rll_main"
+    android:longClickable="true"
+    android:background="@android:color/background_light">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tb_main"
+        android:background="@color/skin_tabbar_bg"
+        android:paddingRight="1dp"
+        android:paddingLeft="1dp"
+        app:navigationIcon="@drawable/usb1_32">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="?android:attr/actionMenuTextColor"
+            android:textSize="16sp"
+            android:id="@+id/tv_tb_title"
+            android:text="@string/jxit_printer"
+            tools:targetApi="honeycomb" />
+        <ImageButton
+            android:id="@+id/btn_tb_right"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluetooth_24"
+            android:clickable="false"
+            tools:ignore="ContentDescription"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/background_dark"
+        android:layout_below="@+id/tb_main">
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/tb_main">
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jxit.jxitprinter1_6.activity.Barcode2dActivity"
+    android:id="@+id/mFragmentQRCODE"
+    android:background="@android:color/background_light">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/barcode_2d_bar"
+        android:background="@color/orange_normal"
+        app:navigationIcon="@drawable/arrow_left">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:id="@+id/tv_text_title"
+            android:text="@string/barcode2d_test" />
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:text="@string/select_barcode2d_param"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_barcode_2d_parm"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/barcode_2d_bar" />
+
+    <TextView
+        android:text="@string/barcode2d_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_barcode_2d_parm"
+        android:id="@+id/tv_barcode_2d_type"
+        android:textSize="16sp"
+        android:gravity="center_vertical|center"
+        android:padding="5dp"
+        android:layout_margin="5dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_barcode_2d_type"
+        android:id="@+id/sp_barcode_2d_type"
+        android:layout_toEndOf="@+id/tv_barcode_2d_type"
+        android:layout_alignTop="@+id/tv_barcode_2d_type"
+        android:padding="5dp"
+        android:layout_toRightOf="@+id/tv_barcode_2d_type" />
+
+    <TextView
+        android:text="@string/tv_barcode2d_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_barcode_2d_type"
+        android:id="@+id/tv_barcode_2d_version"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:padding="5dp" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/et_barcode_2d_version"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/tv_barcode_2d_version"
+        android:layout_alignTop="@+id/tv_barcode_2d_version"
+        android:layout_toRightOf="@+id/tv_barcode_2d_version"
+        android:text="@string/barcode2d_version"
+        android:padding="5dp"
+        android:background="@drawable/edittext_shape"
+        android:textSize="14sp"
+        android:maxLength="2"
+        android:layout_toEndOf="@+id/tv_barcode_2d_version" />
+
+    <TextView
+        android:text="@string/tv2_barcode2d_version_scope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_barcode_2d_version_scope"
+        android:textSize="16sp"
+        android:layout_alignBottom="@+id/tv_barcode_2d_version"
+        android:layout_alignTop="@+id/tv_barcode_2d_version"
+        android:layout_toRightOf="@+id/et_barcode_2d_version"
+        android:padding="5dp"
+        android:layout_toEndOf="@+id/et_barcode_2d_version" />
+
+    <TextView
+        android:text="@string/tv_barcode_2d_error_correction_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_barcode_2d_version"
+        android:id="@+id/tv_barcode_2d_correct"
+        android:layout_margin="5dp"
+        android:textSize="16sp"
+        android:padding="5dp" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/tv_barcode_2d_version"
+        android:layout_toEndOf="@+id/tv_barcode_2d_correct"
+        android:id="@+id/et_barcode_2d_error_correction_level"
+        android:layout_alignBottom="@+id/tv_barcode_2d_correct"
+        android:layout_alignTop="@+id/tv_barcode_2d_correct"
+        android:text="@string/barcode_2d_error_correction_level"
+        android:padding="5dp"
+        android:background="@drawable/edittext_shape"
+        android:textSize="14sp"
+        android:maxLength="1"
+        android:layout_toRightOf="@+id/tv_barcode_2d_correct" />
+
+    <TextView
+        android:text="@string/tv2_barcode_2d_error_correction_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_barcode_2d_version"
+        android:id="@+id/tv_barcode_2d_correct_scope"
+        android:layout_alignBottom="@+id/tv_barcode_2d_correct"
+        android:layout_alignTop="@+id/tv_barcode_2d_correct"
+        android:layout_toRightOf="@+id/et_barcode_2d_error_correction_level"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:layout_toEndOf="@+id/et_barcode_2d_error_correction_level" />
+
+    <TextView
+        android:text="@string/enlargement_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_barcode_2d_correct"
+        android:id="@+id/tv_barcode_2d_enlargement_factor"
+        android:layout_margin="5dp"
+        android:textSize="16sp"
+        android:padding="5dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_barcode_2d_enlargement_factor"
+        android:layout_toEndOf="@+id/tv_barcode_2d_enlargement_factor"
+        android:id="@+id/sp_barcode_2d_enlarge_times"
+        android:layout_alignTop="@+id/tv_barcode_2d_enlargement_factor"
+        android:padding="5dp"
+        android:layout_toRightOf="@+id/tv_barcode_2d_enlargement_factor" />
+
+    <TextView
+        android:text="@string/input_barcode2d_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_barcode_2d_enlargement_factor"
+        android:id="@+id/tv_barcode_2d_content"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:layout_margin="5dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/barcode2d_content"
+        android:ems="10"
+        android:layout_below="@+id/tv_barcode_2d_content"
+        android:id="@+id/et_barcode_2d_content"
+        android:background="@drawable/edittext_shape"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:maxLines="7"
+        android:inputType="" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_barcode_2d_content"
+        android:layout_margin="5dp"
+        android:id="@+id/ll_barcode_2d"
+        style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:text="@string/send_print"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/btn_barcode_2d_send"
+            android:layout_weight="1"
+            android:background="@drawable/click_selector"
+            android:layout_margin="5dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+        <Button
+            android:text="@string/restore_default"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/btn_barcode_2d_default"
+            android:layout_weight="1"
+            android:background="@drawable/click_selector"
+            android:layout_margin="5dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+</RelativeLayout>

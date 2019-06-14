@@ -1,0 +1,25 @@
+﻿<lotterys>
+
+    <lottery>
+        <content>
+            <styles>
+                <style>1b 61 01 </style>
+            </styles>
+            <text>/n玩法:双色球                         流水号:245/n机号:20180112         5720-0530-7ac2-4489-3658/n销售期:2018012            84678有效期:20180112/n销售时间:18-01-12  19:25:25          金额:10元/n
+            </text>
+        </content>
+        <content>
+            <styles>
+                <style>1b 61 01 1b 45 01 </style>
+            </styles>
+            <text>A.03    11    17    26    30    31-15   (1)/nB.03    11    14    15    19    26-09   (1)/nC.03    04    05    14    26    30-05   (1)/nD.03    05    11    15    26    33-07   (1)/nE.01    15    16    28    30    32-03   (1)/n</text>
+        </content>
+        <content>
+            <styles>
+                <style>1b 61 01 </style>
+            </styles>
+            <text>/n开奖时间:18-01-12              附加码:44883149/n地址:深圳市南山区中山园路1001号               /n/n</text>
+        </content>
+    </lottery>
+
+</lotterys>
